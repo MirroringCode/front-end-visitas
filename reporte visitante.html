@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de entradas y salidas de visitante</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="js/datatables.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container visitor-grid">
+
+        <header class="contenido-header">
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Registro visitantes</a></li>
+                    <!-- <li><a href="#">Control salida</a></li> -->
+                    <div class="dropdown">
+                        <li><a href="#" class="dropbtn">Reportes</a></li>
+                        <div id="miDropdown" class="dropdown-contenido">
+                            <a href="#">Reporte general</a>
+                            <a href="#">Lista de visitantes</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="#" class="dropbtn">Usuario</a></li>
+                        <div id="miDropdown" class="dropdown-contenido">
+                                <a href="#">Registro de usuarios</a>
+                                <a href="#">Lista de usuarios</a>
+                        </div>
+                    </div>
+                    <li><a href="#">Salir</a></li>
+                </ul>
+            </nav>
+    
+
+        <div class="membrete">
+            <h1>SISTEMA DE REGISTRO DE VISITANTES</h1>
+            <p>CONTRALORIA DEL ESTADO BOLIVARIANO DE MIRANDA</p>    
+        </div>
+
+    </header>
+
+
+    <main class="contenido-main">
+
+        <div class="titulo-main">
+            <h1>Reporte de visitantes por mes</h1>
+        </div>    
+
+            <table>
+                <table id="data" class="display tabla">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                            <th>Modificar salida / entrada</th>
+                            <th>Modificar Todo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011-04-25</td>
+                            <td>$320,800</td>
+                            <td>
+                                <button id="mdl-active" class="link-btn">Modificar hora de entrada</button>
+                                <button id="mdl-active" class="link-btn">Modificar hora de salida</button>
+                            </td>
+                            <td><button id="mdl-active" class="link-btn">Editar usuario</button></td>
+                        </tr>
+                        <tr>
+                            <td>Garrett Winters</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011-07-25</td>
+                            <td>$170,750</td>
+                            <td>
+                                <button id="mdl-active" class="link-btn">Modificar hora de entrada</button>
+                                <button id="mdl-active" class="link-btn">Modificar hora de salida</button>
+                            </td>
+                            <td><button id="mdl-active" class="link-btn">Editar usuario</button></td>
+                        </tr>
+
+            </table>
+
+            <div id="miModal" class="modal">
+                <div class="modal-content">
+                  <span class="close" id="close">&times;</span>
+                  <form>
+                      <input type="text" name="" placeholder="your name">
+                      <input type="text" name="" placeholder="username">
+                      <input type="text" name="" placeholder="password">
+                      <button>submit</button>
+                  </form>
+                </div>
+              </div>
+  
+
+    </main>
+
+    <div class="contenido-side">
+        <aside>
+            <h2 class="background-titulo">Generar reporte en PDF</h2>
+            <form action="" method="POST" class="pdf-form flex-columna">
+
+
+                    <div class="flex-columna">
+                        <label for="fecha_inicio">Desde esta fecha:</label>
+                        <input type="date" class="input-estilizado" name="fecha_inicio" id="">    
+                    </div>
+
+                    <div class="flex-columna">
+                        <label for="fecha_termina">Hasta esta fecha:</label>
+                        <input type="date" class="input-estilizado" name="fecha_termina" id="">        
+                    </div>
+
+                    <div>
+                        <button type="submit">Reporte</button>
+                    </div>
+
+
+
+            </form>
+        </aside>
+    </div>
+
+
+    <footer class="contenido-pie">
+        <p class="direccion">
+            CEBM.
+            Miranda, Los Teques. Calle
+            Guaicaipuro Res. Paéz Plaza, nivel
+            Mezzanina
+            <span>
+                <i class="fas fa-map-marker"></i>
+            </span>
+        </p>
+        <div class="copyright">
+            <p>Realizado por Dirección Técnica/As copyright, all rights reserved </p>
+        </div>
+        <div class="imagen">
+            <img src="img/las tres llaves.jpg" alt="">
+        </div>
+
+    </footer>
+
+    </div>
+</body>
+</html>

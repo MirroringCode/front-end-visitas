@@ -1,0 +1,629 @@
+
+:root {
+    --color-primario: rgb(21, 137, 231);
+    --fw-500: font-weight: 500;
+    --color-negro: #333333;
+    --color-gris: #808080;
+    --color-gris-c: #c2c0c0;
+    --gris-lowop: #808080ab;
+    --color-blanco: rgb(240, 240, 240);
+}
+
+/* Defino mis propias fuentes para utilizarlas cuando lo requiera */
+@font-face {
+    font-family: 'Abeezee';
+    src: url(fuentes/ABeeZee-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'AsapCondensed';
+    src: url(fuentes/AsapCondensed-Regular.ttf);
+}
+
+
+
+
+/* \\\\\\\\ Layout (estructura) base \\\\\\\\ */
+
+
+/* Le quito los margenes por defecto de estos elementos */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Defino las dimensiones del body */
+body {
+    min-height: 100vh;
+    font-size: 1.125rem;
+    color: rgba(22, 19, 19, 0.671);
+    padding: 0;
+	background-size: cover;
+}
+
+
+/* hago que las listas no tengan los estilos predeterminados */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+
+
+/* Maneja las imagenes más fácil */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Tipografía */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'AsapCondensed', Arial;
+}
+
+p, header, form{
+    font-family: 'Abeezee', Arial;
+
+}
+
+.contenido-side {
+    text-align: center;
+}
+
+/* Clases de Utilidades */
+
+.flex-columna {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.btn-submit {
+    background: var(--color-primario);
+}
+
+/* Estilizado para la etiqueta <a></a> y parezca un boton */
+
+.link-btn {
+    background: transparent;
+    padding: .6em;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid var(--gris-lowop);
+    color: var(--color-negro);
+    font-size: 1rem;
+    font-family: 'Arial';
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    background: var(--color-negro);
+    color: var(--color-blanco)
+}
+
+.input-estilizado {
+    border: 2px solid var(--gris-lowop);
+    width: auto;
+    padding: .5em 3em;
+    border-radius: 5px;
+    font-family: inherit;
+    align-self: center;
+    transition: .15s ease-in;
+    color: var(--color-gris);
+    font-size: 1rem;
+    padding-left: .25em;
+    
+}
+
+.input-estilizado option {
+    font-size: 1.15rem;
+}
+
+.input-estilizado:focus {
+    outline: 1px solid var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+
+
+/* Grillas de la página de login */
+body {
+    display: grid;
+    place-content: center;
+    /* background: #d0f0c0a4; */
+    background-color: #f9ea8f;
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 3em;
+}
+
+/* 
+Defino estructura de página, es decir
+el encabezado (header). contenido extra que va a los lados (aside),
+contenido principal(main) y pie de pagina (footer) y sus respectivas
+dimensiones
+ */
+
+.visitor-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: .9fr 1.5fr;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer';
+    width: 97%;
+    margin-inline: auto;
+    margin: 0 auto;
+}
+
+/* Los elementos del html que van dentro de cada area de la estrucura
+de la página */
+
+.contenido-main {
+    grid-area: 
+    main;
+}
+
+.contenido-side {
+    grid-area: 
+    aside;
+}
+
+.contenido-header {
+    grid-area: header;
+}
+
+.contenido-pie{
+    grid-area: 
+    footer;
+}
+
+/* Color de fondo */
+.contenido-main, .contenido-side, .contenido-pie, .contenido-header {
+    background: #fff;
+}
+
+.contenido-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+
+.contenido-main .titulo-main {
+    text-align: left;
+    background: rgba(240, 232, 62, 0.2);
+    margin: .5em .25em;    
+    align-self: start;
+}
+
+.inicio {
+    font-family: 'Abeezee';
+    text-align: justify;
+    line-height: 1.5;
+    grid-column: span 2;
+}
+
+.inicio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inicio ul li{
+    margin: .75em 2.3em;
+}
+
+.inicio p {
+    margin: .8em 2.8em;
+}
+
+.inicio .agradecimiento {
+    text-align: center;
+}
+
+.inicio .subtitulos {
+    font-weight: 650;
+    font-family: 'AsapCondensed';
+    font-size: 1.35rem;
+}
+
+
+.correos{
+    color: rgb(86, 86, 252);
+}
+
+.background-titulo {
+    background: rgba(240, 232, 62, 0.2);
+}
+
+
+.titulo-main h1 {
+    margin: .25em .5em;
+    grid-column: 1 / 2;
+}
+
+/* Formularios normales */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin: 0 6.9em;
+}
+
+
+/* Barra de progreso del formulario multipasos (progressbar) */
+
+#progressbar {
+    overflow: hidden;
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    display: block;
+    width: 25px;
+    line-height: 27px;
+    background: var(--color-blanco);
+    color: var(--color-negro);
+    margin: .4em auto;
+    border-radius: 3px;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--color-blanco);
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+#progressbar li:first-child:after {
+    content: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after{
+    background: #ccdd9f;
+}
+
+/* Formularios multi-pasos */
+.msform fieldset {
+    border: none;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 1em;
+    
+}
+
+.msform h3 {
+    margin-bottom: 1.5em;
+}
+
+.msform label {
+    text-align: left;
+    font-weight: var(--fw-500);
+    margin: .2em 0;
+    font-size: 1rem;
+
+}
+
+.form-fieldset:not(.active) {
+    display: none;
+}
+
+.msform input[type="text"],
+.msform input[type="number"],
+.msform input[type="time"],
+.msform input[type="date"] {
+    all: unset;
+    background: var(--color-blanco);
+    border-radius: 3px;
+    padding: .6em;
+    color: var(--color-negro);
+    text-align: left;
+}
+
+
+.msform .link-btn {
+    margin-top: 1em;
+}
+
+.botones-multi{
+    display: flex;
+}
+
+.botones-multi input[type="button"],
+.botones-multi input[type="submit"] {
+    width: 100%;
+    margin: auto .2em;
+}
+
+
+.modal {
+  display: none;  /*Hidden by default*/ 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 1em;
+  border: 1px solid #888;
+  width: 85vh; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 80vh;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.formulario button {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: transparent;
+    font-family: 'Abeezee', Arial;
+    font-size: 1rem;
+}
+
+.formulario button:hover {
+    background: rgba(196, 192, 192, 0.747); 
+    cursor: pointer;
+}
+
+.formulario label, .formulario input {
+    align-self: center;
+}
+
+.formulario a {
+    grid-column: span 2;
+    text-decoration: none;
+    color: rgb(119, 117, 117);
+}
+
+.formulario a:hover {
+    color:rgba(143, 1, 1, 0.671)
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(196, 192, 192, 0.747);
+    font-size: 1rem;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="password"]:focus {
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(77, 75, 75, 0.747);
+
+}
+
+.contenido-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    text-align: right;
+    margin: .45em auto;
+    border-radius: 8px;
+}
+
+.contenido-header ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido-header ul li {
+    margin: 1em 1.75em;
+    height: auto;
+    padding: 0;
+    transition: font-size .25s;
+}
+
+
+.contenido-header ul a {
+    text-decoration: none;
+    color: rgba(95, 94, 90, 0.863);
+}
+
+.contenido-header ul li:hover {
+    font-size: 1.3rem;
+    color: rgba(26, 26, 25, 0.863);
+    font-weight: 600;
+}
+
+.contenido-header .membrete {     
+    grid-column: 3;
+    margin: auto .25em;
+}
+
+.contenido-header .imagen{
+    grid-row: span 1 / 1;
+    grid-column: span 1 / 1;
+    width: 20%;
+    margin: .15em 1em;
+    opacity: 0.3;
+}
+
+
+.dropdown-contenido {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    /* border: 1px solid var(--color-negro); */
+    box-shadow: 0 2px 2px 1px var(--color-gris);
+    border-top: none;
+    z-index: 1;
+}
+
+.dropdown-contenido a {
+    float: none;
+    color: inherit;
+    padding: .5em .5em;
+    text-align: left;
+}
+
+.dropdown-contenido a:hover {
+    background-color: var(--color-gris-c);
+    color: var(--color-blanco);
+}
+
+.dropdown:hover .dropdown-contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-side {
+    line-height: 1.5;
+    font-size: 1.35rem;
+}
+
+.contenido-side aside, .contenido-side p {
+    margin: 1em .5em;
+}
+
+/* .contenido-side img {
+    width: 60%;
+    margin: auto;
+} */
+
+
+.pdf-form {
+    align-items: center;
+}
+
+
+.pdf-form div {
+    margin: 1em auto;
+}
+
+.pdf-form label,
+.pdf-form input
+{
+    width: 100%;
+    padding: auto;
+}
+
+.pdf-form button {
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: .9em 6em;
+    border-radius: 6px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    font-family: inherit;
+}
+
+.pdf-form button:hover {
+    background-color: rgb(5, 110, 196);
+}
+
+.pdf-form input {
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.contenido-pie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.25em;
+    width: 100%;
+    /* max-height: 100%; */
+    font-weight: 600;
+    margin: .3em auto;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.contenido-pie p{
+    padding: .5em;
+}
+
+
+.imagen {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+
+.contenido-pie img {
+    width: 15%;
+    margin: auto 1.5em;
+    opacity: .5;
+}
+
+.agradecimiento {
+    font-style: italic;
+    align-self: center;
+}
+
+.contenido-pie .direccion {
+    text-align: left;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar salidas</title>
+    <link rel="stylesheet" type="text/css" href="estilos/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container visitor-grid">
+        
+        <header class="contenido-header">
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Registro visitantes</a></li>
+                    <!-- <li><a href="#">Control salida</a></li> -->
+                    <div class="dropdown">
+                        <li><a href="#" class="dropbtn">Reportes</a></li>
+                        <div id="miDropdown" class="dropdown-contenido">
+                            <a href="#">Reporte general</a>
+                            <a href="#">Lista de visitantes</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="#" class="dropbtn">Usuario</a></li>
+                        <div id="miDropdown" class="dropdown-contenido">
+                            <a href="#">Registro de usuarios</a>
+                            <a href="#">Lista de usuarios</a>
+                        </div>
+                    </div>
+                    <li><a href="#">Salir</a></li>
+                </ul>
+            </nav>
+            
+            
+        <div class="membrete">
+            <h1>SISTEMA DE REGISTRO DE VISITANTES</h1>
+            <p>CONTRALORIA DEL ESTADO BOLIVARIANO DE MIRANDA</p>    
+        </div>
+
+    </header>
+    
+    
+    
+    <main class="contenido-main">
+        
+        <div class="titulo-main">
+            <h1>Registrar salida y entrada</h1>
+        </div>
+        
+        <form action="" class="msform">
+            <!-- <ul id="progressbar">
+                                <li class="active">Datos de entrada del visitante</li>
+                                <li>Datos de salida</li>
+                                <li>Enviar</li>
+                            </ul> -->
+
+                            <fieldset id="form-fil-1" class="flex-columna form-fieldset active">
+                                <h2 class="fs-title">Datos de entrada</h2>
+                                <h3 class="fs-title">Primer fomulario donde se registran los datos de entrada del visitante</h3>
+                                
+                                <label for="">Nro carnet:</label>
+                                <input type="number" name="" id="">
+                                <label for="">CI:</label>
+                                <input type="text" name="" id="">
+                                <label for="">Nombre:</label>
+                                <input type="text" name="" id="">
+                                <label for="">Apellido:</label>
+                                <input type="text" name="" id="">
+                                <label for="">Fecha de entrada:</label>
+                                <input type="date" name="" id="">
+                                <label for="">Hora de entrada:</label>
+                                <input type="time" name="" id="">
+                                <div class="botones-multi">
+                                    <input type="button" class="link-btn siguiente" id ="siguiente" name="next" value="siguiente">        
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset id="form-fil-2" class="flex-columna form-fieldset">
+                                <h2 class="fs-title">Datos de visita</h2>
+                                <h3 class="fs-title">Segundo fomulario donde se registran los datos de visita del visitante</h3>
+                                
+                                <label for="">Motivo:</label>
+                                <input type="number" name="" id="">
+                                <label for="">Persona visitada:</label>
+                                <input type="text" name="" id="">
+                                <label for="">Lugar visitado:</label>
+                                <input type="text" name="" id="">
+                                <label for="">Observaciones:</label>
+                                <input type="text" name="" id="">
+                                <div class="botones-multi">
+                                    <input type="button" name="previous" id="anterior" class="link-btn" value="anterior">
+                                    <input type="button" id ="siguiente" name="next" class="link-btn" value="siguiente">
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="form-fil-3" class="flex-columna form-fieldset">
+                                <h2 class="fs-title">Datos de salida</h2>
+                                <h3 class="fs-title">Tercer fomulario donde se registran los datos de salida del visitante</h3>
+
+                                <label for="">Fecha de entrada:</label>
+                                <input type="date" name="" id="">
+                                <label for="">Hora de entrada:</label>
+                                <input type="time" name="" id="">
+                                <div class="botones-multi">
+                                    <input type="button" name="previous" id="anterior" class="link-btn" value="anterior">
+                                    <input type="submit" class="link-btn" value="enviar"></button>
+                                </div>
+                            </fieldset>
+                            
+                        </form>
+    
+                    </main>
+                    
+        <div class="contenido-side">
+            <aside>
+                <h2 class="background-titulo">Soporte</h2>
+                <p>En caso de inconvenientes con el sistema o cualquier duda, contacte a alguno de los encargados del area de desarrollo del Departamento de Tecnología.</p>
+            </aside>
+            
+            <aside>
+                <h2 class="background-titulo">Información</h2>
+                <p>Para llevar un registro y control pleno del sistema debe llenar los campos con datos reales. </p>
+            </aside>
+            
+            <aside>
+                <h2 class="background-titulo">Estrategia</h2>
+                <p>Al momento de ingresar los datos, pida al visitante su Cedula de Identidad.</p>
+
+            </aside>
+        </div>
+
+        <footer class="contenido-pie">
+                <p class="direccion">
+                    CEBM.
+                    Miranda, Los Teques. Calle
+                    Guaicaipuro Res. Paéz Plaza, nivel
+                    Mezzanina
+                    <span>
+                        <i class="fa-regular fa-user"></i>
+                    </span>
+                </p>
+                <div class="copyright">
+                    <p>Realizado por Dirección Técnica/As copyright, all rights reserved </p>
+                </div>
+                <div class="imagen">
+                    <img src="img/las tres llaves.jpg" alt="">
+                </div>
+                
+        </footer>
+
+        </div>
+        
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/scripts.js"></script>
+</body>
+</html>
